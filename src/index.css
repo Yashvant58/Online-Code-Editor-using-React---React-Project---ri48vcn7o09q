@@ -67,3 +67,16 @@ body {
     margin:0px;
     padding:10px;
   }
+  
+.icons{
+  display: flex;
+  flex-flow: row;
+  gap: 10px;
+color: coral;
+
+}
+.buttons{
+  display: flex;
+  gap: 5px;
+  
+}

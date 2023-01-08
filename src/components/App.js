@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Editor from './Editor'
 import useLocalStorage from '../hooks/useLocalStorage'
+import { FontAwesomeIcon } from 
+'@fortawesome/react-fontawesome';
+import { faHtml5, faCss3Alt, faJs } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
   const [html, setHtml] = useLocalStorage('html', '')
@@ -27,18 +30,21 @@ function App() {
     <h3>Online Code Editor</h3>
       <div className="pane top-pane">
         <Editor
+          icon = <FontAwesomeIcon icon={faHtml5}/>
           language="xml"
           displayName="HTML"
           value={html}
           onChange={setHtml}
         />
         <Editor
+         icon = <FontAwesomeIcon icon={faCss3Alt}/>
           language="css"
           displayName="CSS"
           value={css}
           onChange={setCss}
         />
         <Editor
+          icon = <FontAwesomeIcon icon={faJs}  />
           language="javascript"
           displayName="JS"
           value={js}
